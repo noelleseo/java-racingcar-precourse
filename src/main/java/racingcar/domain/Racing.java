@@ -13,8 +13,8 @@ public class Racing {
         Map<RacingCarName, RacingCarScore> racingEntryMap = new HashMap<>();
         String[] entryArr = entryStr.split(Constants.E_COMMA);
         
-        if(entryArr.length == 0) {
-            throw new IllegalArgumentException(Constants.ERR_NOT_NULL);
+        if(entryArr.length < 2) {
+            throw new IllegalArgumentException(Constants.ERR_OVER_2_CARS);
         }
         
         for(String name : entryArr) {
