@@ -1,9 +1,22 @@
 package racingcar.domain;
 
+import java.util.HashMap;
+import java.util.Map;
+import racingcar.util.Constants;
+
 public class Racing {
+    private RacingEntry racingEntry;
     
     public void initRacing(String entryStr) throws IllegalArgumentException {
-        //참가 엔트리를 받음
+        Map<RacingCarName, RacingCarScore> racingEntryMap = new HashMap<>();
+        
+        for(String name : entryStr.split(Constants.E_COMMA)) {
+            RacingCarName racingCarName = new RacingCarName(name);
+            RacingCarScore racingCarScore = new RacingCarScore();
+            racingEntryMap.put(racingCarName, racingCarScore);
+        }
+        
+        racingEntry = new RacingEntry(racingEntryMap);
     }
     
     public void doRacing(String round) throws IllegalArgumentException {

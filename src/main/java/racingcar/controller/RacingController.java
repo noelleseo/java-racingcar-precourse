@@ -9,7 +9,13 @@ public class RacingController {
     
     public void initRacing() {
         System.out.println(Constants.MSG_GET_ENTRY);
-        racing.initRacing(Console.readLine());
+
+        try {
+            racing.initRacing(Console.readLine());
+        }catch(IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            initRacing();
+        }
     }
     
     public void doRacing() {
