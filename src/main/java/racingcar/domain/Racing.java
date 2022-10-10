@@ -6,6 +6,7 @@ import racingcar.util.Constants;
 
 public class Racing {
     private RacingEntry racingEntry;
+    private RacingRound racingRound;
     
     public void initRacing(String entryStr) throws IllegalArgumentException {
         Map<RacingCarName, RacingCarScore> racingEntryMap = new HashMap<>();
@@ -20,7 +21,8 @@ public class Racing {
     }
     
     public void doRacing(String round) throws IllegalArgumentException {
-        //수행 라운드를 받아 레이스 수행
+        racingRound = new RacingRound(round);
+        
     }
     
     public String endRacing() { //레이스 종료 후 결과 리턴

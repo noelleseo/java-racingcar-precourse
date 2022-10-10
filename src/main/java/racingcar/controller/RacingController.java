@@ -20,7 +20,13 @@ public class RacingController {
     
     public void doRacing() {
         System.out.println(Constants.MSG_GET_ROUND);
-        racing.doRacing(Console.readLine());
+        
+        try {
+            racing.doRacing(Console.readLine());
+        }catch(IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            doRacing();
+        }
     }
     
     public void endRacing() {
