@@ -10,13 +10,13 @@ public class RacingCarName {
         validateName(name.trim());
         this.name = name.trim();
     }
-    
+
     public String toString() {
         return name;
     }
-    
+
     private void validateName(String name) {
-        if(!RegexUtil.match("^.{1,5}$", name)) {
+        if (!RegexUtil.match("^.{1,5}$", name)) {
             throw new IllegalArgumentException(Constants.ERR_1_TO_5_CHAR);
         }
     }

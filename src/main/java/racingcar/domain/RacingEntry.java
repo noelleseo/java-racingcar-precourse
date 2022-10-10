@@ -10,7 +10,7 @@ import racingcar.util.Constants;
 
 public class RacingEntry {
     private final Map<RacingCarName, RacingCarScore> racingEntry;
-    
+
     Comparator<Entry<RacingCarName, RacingCarScore>> comparator =
             new Comparator<Entry<RacingCarName, RacingCarScore>>() {
                 @Override
@@ -23,7 +23,7 @@ public class RacingEntry {
     public RacingEntry(Map<RacingCarName, RacingCarScore> racingEntry) {
         this.racingEntry = racingEntry;
     }
-    
+
     public RacingResult process(RacingResult result) {
         Set<RacingCarName> keys = racingEntry.keySet();
 
@@ -37,7 +37,7 @@ public class RacingEntry {
 
         return result;
     }
-    
+
     public RacingResult getWinner(RacingResult result) {
         RacingCarScore maxScore = Collections.max(racingEntry.entrySet(), comparator).getValue();
         Set<RacingCarName> keys = racingEntry.keySet();
@@ -52,14 +52,14 @@ public class RacingEntry {
         result.addMessage(winners.substring(0, winners.length() - 2));
 
         return result;
-    }    
-    
+    }
+
     private void countScore(RacingCarName name) {
         if (Randoms.pickNumberInRange(0, 9) >= 4) {
             racingEntry.get(name).addScore();
         }
     }
-    
+
     private String getResultMessage(RacingCarName name, RacingCarScore score) {
         String str = "";
         str += name.toString() + " " + Constants.E_COLON + " "; // "pobi : "
@@ -69,8 +69,8 @@ public class RacingEntry {
         }
 
         return str;
-    }    
-    
+    }
+
     private String getWinnerMessage(RacingCarName name, RacingCarScore maxScore) {
         String str = "";
 
@@ -79,5 +79,5 @@ public class RacingEntry {
         }
 
         return str;
-    }    
+    }
 }

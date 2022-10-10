@@ -10,16 +10,16 @@ public class RacingRound {
         validateRound(round);
         this.round = Integer.parseInt(round);
     }
-    
+
     public int toInt() {
         return round;
     }
-    
+
     private void validateRound(String round) {
-        if(!RegexUtil.match("^[0-9]+$", round)) {
+        if (!RegexUtil.match("^[0-9]+$", round)) {
             throw new IllegalArgumentException(Constants.ERR_NOT_NUMBER);
         }
-        if(RegexUtil.match("^[0]+$", round)) {
+        if (RegexUtil.match("^[0]+$", round)) {
             throw new IllegalArgumentException(Constants.ERR_NOT_ZERO);
         }
     }

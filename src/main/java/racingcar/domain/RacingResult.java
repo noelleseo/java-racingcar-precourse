@@ -14,11 +14,11 @@ public class RacingResult {
     public String toString() {
         return result;
     }
-    
+
     public void addMessage(String msg) {
         this.result += msg;
     }
-    
+
     public void addNewLine() {
         this.result += "\n";
     }
