@@ -16,10 +16,10 @@ public class RacingRound {
     }
 
     private void validateRound(String round) {
-        if (!RegexUtil.match("^[0-9]+$", round)) {
+        if (!RegexUtil.match(Constants.REGEX_NOT_NUMBER, round)) {
             throw new IllegalArgumentException(Constants.ERR_NOT_NUMBER);
         }
-        if (RegexUtil.match("^[0]+$", round)) {
+        if (RegexUtil.match(Constants.REGEX_NOT_ZERO, round)) {
             throw new IllegalArgumentException(Constants.ERR_NOT_ZERO);
         }
     }

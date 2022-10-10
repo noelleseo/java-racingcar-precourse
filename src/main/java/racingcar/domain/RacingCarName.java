@@ -16,7 +16,7 @@ public class RacingCarName {
     }
 
     private void validateName(String name) {
-        if (!RegexUtil.match("^.{1,5}$", name)) {
+        if (!RegexUtil.match(Constants.REGEX_1_TO_5_CHAR, name)) {
             throw new IllegalArgumentException(Constants.ERR_1_TO_5_CHAR);
         }
     }

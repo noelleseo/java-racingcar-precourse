@@ -10,6 +10,8 @@ import racingcar.util.Constants;
 
 public class RacingEntry {
     private final Map<RacingCarName, RacingCarScore> racingEntry;
+    private static final int FOUR = 4;
+    private static final int NINE = 9;
 
     Comparator<Entry<RacingCarName, RacingCarScore>> comparator =
             new Comparator<Entry<RacingCarName, RacingCarScore>>() {
@@ -49,13 +51,13 @@ public class RacingEntry {
             winners += getWinnerMessage(name, maxScore);
         }
 
-        result.addMessage(winners.substring(0, winners.length() - 2));
+        result.addMessage(winners.substring(Constants.ZERO, winners.length() - Constants.TWO));
 
         return result;
     }
 
     private void countScore(RacingCarName name) {
-        if (Randoms.pickNumberInRange(0, 9) >= 4) {
+        if (Randoms.pickNumberInRange(Constants.ZERO, NINE) >= FOUR) {
             racingEntry.get(name).addScore();
         }
     }
@@ -64,7 +66,7 @@ public class RacingEntry {
         String str = "";
         str += name.toString() + Constants.E_WHITESPACE + Constants.E_COLON + Constants.E_WHITESPACE; // "pobi : "
 
-        for (int i = 0; i < score.toInt(); i++) { // 점수만큼 하이픈 추가
+        for (int i = Constants.ZERO; i < score.toInt(); i++) {
             str += Constants.E_HYPHEN;
         }
 
@@ -74,7 +76,7 @@ public class RacingEntry {
     private String getWinnerMessage(RacingCarName name, RacingCarScore maxScore) {
         String str = "";
 
-        if (racingEntry.get(name).toInt() == maxScore.toInt()) { // "pobi, "
+        if (racingEntry.get(name).toInt() == maxScore.toInt()) {
             str = name.toString() + Constants.E_COMMA + Constants.E_WHITESPACE;
         }
 

@@ -13,7 +13,7 @@ public class Racing {
         Map<RacingCarName, RacingCarScore> racingEntryMap = new HashMap<>();
         String[] entryArr = entryStr.split(Constants.E_COMMA);
 
-        if (entryArr.length < 2) {
+        if (entryArr.length < Constants.TWO) {
             throw new IllegalArgumentException(Constants.ERR_OVER_2_CARS);
         }
 
@@ -29,7 +29,7 @@ public class Racing {
     public void doRacing(String round) throws IllegalArgumentException {
         racingRound = new RacingRound(round);
         racingResult = new RacingResult();
-        int currentRound = 0;
+        int currentRound = Constants.ZERO;
 
         while (racingRound.toInt() > currentRound) {
             racingResult = racingEntry.process(racingResult);
