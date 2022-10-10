@@ -9,7 +9,7 @@ import camp.nextstep.edu.missionutils.Randoms;
 import racingcar.util.Constants;
 
 public class RacingEntry {
-    Map<RacingCarName, RacingCarScore> racingEntry;
+    private final Map<RacingCarName, RacingCarScore> racingEntry;
     
     Comparator<Entry<RacingCarName, RacingCarScore>> comparator =
             new Comparator<Entry<RacingCarName, RacingCarScore>>() {

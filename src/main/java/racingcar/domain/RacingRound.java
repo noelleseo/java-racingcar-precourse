@@ -4,7 +4,7 @@ import racingcar.util.Constants;
 import racingcar.util.RegexUtil;
 
 public class RacingRound {
-    private int round;
+    private final int round;
 
     public RacingRound(String round) {
         validateRound(round);
