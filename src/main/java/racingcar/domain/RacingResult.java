@@ -7,7 +7,7 @@ public class RacingResult {
 
     public RacingResult() {
         this.result = "";
-        addMessage(Constants.E_RESULT);
+        addMessage(Constants.RESULT);
         addNewLine();
     }
 
@@ -20,6 +20,6 @@ public class RacingResult {
     }
 
     public void addNewLine() {
-        this.result += Constants.E_NEWLINE;
+        this.result += Constants.NEWLINE;
     }
 }

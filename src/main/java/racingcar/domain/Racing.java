@@ -11,7 +11,7 @@ public class Racing {
 
     public void initRacing(String entryStr) throws IllegalArgumentException {
         Map<RacingCarName, RacingCarScore> racingEntryMap = new HashMap<>();
-        String[] entryArr = entryStr.split(Constants.E_COMMA);
+        String[] entryArr = entryStr.split(Constants.COMMA);
 
         if (entryArr.length < Constants.TWO) {
             throw new IllegalArgumentException(Constants.ERR_OVER_2_CARS);

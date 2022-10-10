@@ -45,7 +45,7 @@ public class RacingEntry {
         Set<RacingCarName> keys = racingEntry.keySet();
         String winners = "";
 
-        result.addMessage(Constants.MSG_WINNER + Constants.E_WHITESPACE + Constants.E_COLON + Constants.E_WHITESPACE);
+        result.addMessage(Constants.MSG_WINNER + Constants.WHITESPACE + Constants.COLON + Constants.WHITESPACE);
 
         for (RacingCarName name : keys) {
             winners += getWinnerMessage(name, maxScore);
@@ -64,10 +64,10 @@ public class RacingEntry {
 
     private String getResultMessage(RacingCarName name, RacingCarScore score) {
         String str = "";
-        str += name.toString() + Constants.E_WHITESPACE + Constants.E_COLON + Constants.E_WHITESPACE; // "pobi : "
+        str += name.toString() + Constants.WHITESPACE + Constants.COLON + Constants.WHITESPACE; // "pobi : "
 
         for (int i = Constants.ZERO; i < score.toInt(); i++) {
-            str += Constants.E_HYPHEN;
+            str += Constants.HYPHEN;
         }
 
         return str;
@@ -77,7 +77,7 @@ public class RacingEntry {
         String str = "";
 
         if (racingEntry.get(name).toInt() == maxScore.toInt()) {
-            str = name.toString() + Constants.E_COMMA + Constants.E_WHITESPACE;
+            str = name.toString() + Constants.COMMA + Constants.WHITESPACE;
         }
 
         return str;
