@@ -10,6 +10,7 @@ public class Constants {
     public static String E_COLON = ":";
     public static String E_HYPHEN = "-";
     public static String E_WHITESPACE = " ";
+    public static String E_NEWLINE = "\n";
     
     public static String ERR_1_TO_5_CHAR = "[ERROR] 자동차 이름은 1자에서 5자 사이로 입력해 주세요.";
     public static String ERR_OVER_2_CARS = "[ERROR] 최소 2개의 자동차 이름을 입력해 주세요.";

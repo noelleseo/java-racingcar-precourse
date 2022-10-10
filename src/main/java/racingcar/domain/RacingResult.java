@@ -20,6 +20,6 @@ public class RacingResult {
     }
 
     public void addNewLine() {
-        this.result += "\n";
+        this.result += Constants.E_NEWLINE;
     }
 }
