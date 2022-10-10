@@ -19,5 +19,8 @@ public class RacingCarName {
         if(!RegexUtil.match("^.{1,5}$", name)) {
             throw new IllegalArgumentException(Constants.ERR_1_TO_5_CHAR);
         }
+        if(!RegexUtil.match("^[ ]+$", name)) {
+            throw new IllegalArgumentException(Constants.ERR_NOT_WHITESPACE);
+        }
     }
 }

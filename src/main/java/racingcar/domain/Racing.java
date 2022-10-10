@@ -11,8 +11,13 @@ public class Racing {
     
     public void initRacing(String entryStr) throws IllegalArgumentException {
         Map<RacingCarName, RacingCarScore> racingEntryMap = new HashMap<>();
+        String[] entryArr = entryStr.split(Constants.E_COMMA);
         
-        for(String name : entryStr.split(Constants.E_COMMA)) {
+        if(entryArr.length == 0) {
+            throw new IllegalArgumentException(Constants.ERR_NOT_NULL);
+        }
+        
+        for(String name : entryArr) {
             RacingCarName racingCarName = new RacingCarName(name);
             RacingCarScore racingCarScore = new RacingCarScore();
             racingEntryMap.put(racingCarName, racingCarScore);
