@@ -12,4 +12,5 @@ public class Constants {
     
     public static String ERR_1_TO_5_CHAR = "[ERROR] 자동차 이름은 1자에서 5자 사이로 입력해 주세요.";
     public static String ERR_NOT_NUMBER = "[ERROR] 시도 회수는 숫자여야 합니다.";
+    public static String ERR_NOT_ZERO = "[ERROR] 시도 회수는 0이 될 수 없습니다.";
 }
