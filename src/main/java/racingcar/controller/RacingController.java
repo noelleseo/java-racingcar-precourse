@@ -29,7 +29,7 @@ public class RacingController {
         }
     }
     
-    public void endRacing() {
-        System.out.println(racing.endRacing());
+    public String endRacing() {
+        return racing.endRacing();
     }
 }

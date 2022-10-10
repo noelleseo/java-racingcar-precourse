@@ -8,6 +8,6 @@ public class RacingView {
     public void racing() {
         controller.initRacing();
         controller.doRacing();
-        controller.endRacing();
+        System.out.println(controller.endRacing());
     }
 }

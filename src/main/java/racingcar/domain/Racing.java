@@ -32,9 +32,9 @@ public class Racing {
         }
     }
     
-    public String endRacing() { //레이스 종료 후 결과 리턴
-        String result = "";
+    public String endRacing() {
+        racingEntry.getWinner(racingResult);
         
-        return result;
+        return racingResult.toString();
     }
 }
